@@ -1,4 +1,3 @@
-
 <form action="q1_md5.php" method="POST">
 	<label>Username</label>
 	<input type="text" name="username"><p>

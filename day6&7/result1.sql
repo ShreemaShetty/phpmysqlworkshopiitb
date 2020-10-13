@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 13, 2020 at 11:39 AM
+-- Generation Time: Oct 13, 2020 at 12:08 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -38,7 +38,7 @@ CREATE TABLE `adminlogin` (
 -- Dumping data for table `adminlogin`
 --
 
--- admin password is '2020ADMIN1' which is encrypted and stored 
+-- admin password is '2020ADMIN1' which is encrypted seperately and stored in db
 
 INSERT INTO `adminlogin` (`id`, `email`, `password`) VALUES
 (1, 'admin@gmail.com', '6845ab4e1b500b75593b2c8471a25165');
@@ -65,9 +65,8 @@ CREATE TABLE `marks` (
 --
 
 INSERT INTO `marks` (`id`, `student_id`, `name`, `sub1`, `sub2`, `sub3`, `totalobtained`, `percentage`) VALUES
-(1, 1, '', 66, 66, 66, 198, 66),
-(2, 2, '', 88, 88, 88, 264, 88),
-(3, 3, '', 55, 55, 55, 165, 55);
+(1, 1, '', 55, 55, 55, 165, 55),
+(2, 2, '', 88, 88, 88, 264, 88);
 
 -- --------------------------------------------------------
 
@@ -88,8 +87,7 @@ CREATE TABLE `student` (
 
 INSERT INTO `student` (`id`, `name`, `email`, `password`) VALUES
 (1, 'shreema', 'shreema@gmail.com', '71c48d9e9ad2742a2acceb6b9b6792f7'),
-(2, 'shreya', 'shreya@gmail.com', '1eb0c46757790e563b73548c0d960d9d'),
-(3, 'faiz', 'faiz@gmail.com', '2e300361babeec342df93a8f29761c69');
+(2, 'shreya', 'shreya@gmail.com', '1eb0c46757790e563b73548c0d960d9d');
 
 --
 -- Indexes for dumped tables
@@ -121,13 +119,13 @@ ALTER TABLE `student`
 -- AUTO_INCREMENT for table `adminlogin`
 --
 ALTER TABLE `adminlogin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `marks`
 --
 ALTER TABLE `marks`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
